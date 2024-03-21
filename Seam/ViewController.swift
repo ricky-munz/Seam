@@ -7,13 +7,16 @@
 
 import UIKit
 
+class Api {
+	static let shared = Api()
+
+	private init() {}
+}
+
 class ViewController: UIViewController {
 
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view.
+
 	}
-
-
 }
-

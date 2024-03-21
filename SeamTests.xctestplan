@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "98BA2B5B-8384-4E02-929B-67B0865823A7",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Seam.xcodeproj",
+      "identifier" : "9C6716932BAC78A800953004",
+      "name" : "Seam"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Seam.xcodeproj",
+        "identifier" : "9C6716A92BAC78A900953004",
+        "name" : "SeamTests"
+      }
+    }
+  ],
+  "version" : 1
+}

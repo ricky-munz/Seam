@@ -14,19 +14,10 @@
 		9C6716A12BAC78A900953004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6716A02BAC78A900953004 /* Assets.xcassets */; };
 		9C6716A42BAC78A900953004 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6716A22BAC78A900953004 /* LaunchScreen.storyboard */; };
 		9C6716AF2BAC78A900953004 /* SeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6716AE2BAC78A900953004 /* SeamTests.swift */; };
-		9C6716B92BAC78A900953004 /* SeamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6716B82BAC78A900953004 /* SeamUITests.swift */; };
-		9C6716BB2BAC78A900953004 /* SeamUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6716BA2BAC78A900953004 /* SeamUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		9C6716AB2BAC78A900953004 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9C67168C2BAC78A700953004 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9C6716932BAC78A800953004;
-			remoteInfo = Seam;
-		};
-		9C6716B52BAC78A900953004 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9C67168C2BAC78A700953004 /* Project object */;
 			proxyType = 1;
@@ -46,9 +37,7 @@
 		9C6716A52BAC78A900953004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C6716AA2BAC78A900953004 /* SeamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C6716AE2BAC78A900953004 /* SeamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeamTests.swift; sourceTree = "<group>"; };
-		9C6716B42BAC78A900953004 /* SeamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C6716B82BAC78A900953004 /* SeamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeamUITests.swift; sourceTree = "<group>"; };
-		9C6716BA2BAC78A900953004 /* SeamUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeamUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9C6716C72BAC7A4500953004 /* SeamTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SeamTests.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,22 +55,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C6716B12BAC78A900953004 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		9C67168B2BAC78A700953004 = {
 			isa = PBXGroup;
 			children = (
+				9C6716C72BAC7A4500953004 /* SeamTests.xctestplan */,
 				9C6716962BAC78A800953004 /* Seam */,
 				9C6716AD2BAC78A900953004 /* SeamTests */,
-				9C6716B72BAC78A900953004 /* SeamUITests */,
 				9C6716952BAC78A800953004 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +73,6 @@
 			children = (
 				9C6716942BAC78A800953004 /* Seam.app */,
 				9C6716AA2BAC78A900953004 /* SeamTests.xctest */,
-				9C6716B42BAC78A900953004 /* SeamUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,15 +97,6 @@
 				9C6716AE2BAC78A900953004 /* SeamTests.swift */,
 			);
 			path = SeamTests;
-			sourceTree = "<group>";
-		};
-		9C6716B72BAC78A900953004 /* SeamUITests */ = {
-			isa = PBXGroup;
-			children = (
-				9C6716B82BAC78A900953004 /* SeamUITests.swift */,
-				9C6716BA2BAC78A900953004 /* SeamUITestsLaunchTests.swift */,
-			);
-			path = SeamUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,24 +137,6 @@
 			productReference = 9C6716AA2BAC78A900953004 /* SeamTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9C6716B32BAC78A900953004 /* SeamUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 9C6716C42BAC78A900953004 /* Build configuration list for PBXNativeTarget "SeamUITests" */;
-			buildPhases = (
-				9C6716B02BAC78A900953004 /* Sources */,
-				9C6716B12BAC78A900953004 /* Frameworks */,
-				9C6716B22BAC78A900953004 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				9C6716B62BAC78A900953004 /* PBXTargetDependency */,
-			);
-			name = SeamUITests;
-			productName = SeamUITests;
-			productReference = 9C6716B42BAC78A900953004 /* SeamUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +151,6 @@
 						CreatedOnToolsVersion = 15.2;
 					};
 					9C6716A92BAC78A900953004 = {
-						CreatedOnToolsVersion = 15.2;
-						TestTargetID = 9C6716932BAC78A800953004;
-					};
-					9C6716B32BAC78A900953004 = {
 						CreatedOnToolsVersion = 15.2;
 						TestTargetID = 9C6716932BAC78A800953004;
 					};
@@ -221,7 +171,6 @@
 			targets = (
 				9C6716932BAC78A800953004 /* Seam */,
 				9C6716A92BAC78A900953004 /* SeamTests */,
-				9C6716B32BAC78A900953004 /* SeamUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,13 +187,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		9C6716A82BAC78A900953004 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		9C6716B22BAC78A900953004 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,15 +214,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		9C6716B02BAC78A900953004 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				9C6716BB2BAC78A900953004 /* SeamUITestsLaunchTests.swift in Sources */,
-				9C6716B92BAC78A900953004 /* SeamUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -288,11 +221,6 @@
 			isa = PBXTargetDependency;
 			target = 9C6716932BAC78A800953004 /* Seam */;
 			targetProxy = 9C6716AB2BAC78A900953004 /* PBXContainerItemProxy */;
-		};
-		9C6716B62BAC78A900953004 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9C6716932BAC78A800953004 /* Seam */;
-			targetProxy = 9C6716B52BAC78A900953004 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -531,42 +459,6 @@
 			};
 			name = Release;
 		};
-		9C6716C52BAC78A900953004 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9LMP86F23V;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rickymunz.SeamUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Seam;
-			};
-			name = Debug;
-		};
-		9C6716C62BAC78A900953004 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 9LMP86F23V;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.rickymunz.SeamUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Seam;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -593,15 +485,6 @@
 			buildConfigurations = (
 				9C6716C22BAC78A900953004 /* Debug */,
 				9C6716C32BAC78A900953004 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C6716C42BAC78A900953004 /* Build configuration list for PBXNativeTarget "SeamUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9C6716C52BAC78A900953004 /* Debug */,
-				9C6716C62BAC78A900953004 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

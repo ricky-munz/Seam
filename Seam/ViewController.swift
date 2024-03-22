@@ -12,8 +12,37 @@ class Api {
 
 	private init() {}
 
-	func loadBreweries(completion: ([String]) -> Void) {
+	func loadBreweries(completion: @escaping ([String]) -> Void) {
+		let urlString = "https://api.openbrewerydb.org/v1/breweries"
 
+		guard var components = URLComponents(string: urlString) else {
+			completion([])
+			return
+		}
+
+		components.queryItems = [
+			URLQueryItem(name: "per_page", value: "2")
+		]
+
+		guard let url = components.url else {
+			completion([])
+			return
+		}
+
+		let request = URLRequest(url: url)
+
+		URLSession.shared.dataTask(with: request) { data, _, error in
+			guard
+				error == nil,
+				let data
+			else {
+				completion([])
+				return
+			}
+
+			// TODO: decode JSON here.
+			completion([])
+		}.resume()
 	}
 }
 
@@ -26,8 +55,8 @@ class ViewController: UIViewController {
 
 		configureViews()
 
-		Api.shared.loadBreweries() { _ in
-
+		Api.shared.loadBreweries() { breweryNames in
+			print(breweryNames)
 		}
 	}
 

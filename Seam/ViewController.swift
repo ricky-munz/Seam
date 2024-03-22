@@ -11,6 +11,10 @@ class Api {
 	static let shared = Api()
 
 	private init() {}
+
+	func loadBreweries(completion: ([String]) -> Void) {
+
+	}
 }
 
 class ViewController: UIViewController {
@@ -21,6 +25,10 @@ class ViewController: UIViewController {
 		super.viewDidLoad()
 
 		configureViews()
+
+		Api.shared.loadBreweries() { _ in
+
+		}
 	}
 
 	private func configureViews() {

@@ -20,6 +20,10 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
+		configureViews()
+	}
+
+	private func configureViews() {
 		tableView.translatesAutoresizingMaskIntoConstraints = false
 
 		view.addSubview(tableView)

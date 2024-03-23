@@ -23,7 +23,7 @@ final class ViewControllerTests: XCTestCase {
 		let expectation = expectation(description: "Load rows")
 
 		DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
-			XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 2)
+			XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 20)
 			expectation.fulfill()
 		}
 

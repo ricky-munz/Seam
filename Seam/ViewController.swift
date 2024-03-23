@@ -25,7 +25,7 @@ class Api {
 		}
 
 		components.queryItems = [
-			URLQueryItem(name: "per_page", value: "2")
+			URLQueryItem(name: "per_page", value: "20")
 		]
 
 		guard let url = components.url else {

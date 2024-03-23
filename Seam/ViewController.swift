@@ -54,17 +54,26 @@ class ViewController: UIViewController {
 
 	let tableView = UITableView()
 
+	var breweryNames = [String]()
+
+	let cellReuseId = "cell"
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
 		configureViews()
 
-		Api.shared.loadBreweries() { breweryNames in
-			print(breweryNames)
+		Api.shared.loadBreweries() { [weak self] breweryNames in
+			DispatchQueue.main.async {
+				self?.breweryNames = breweryNames
+				self?.tableView.reloadData()
+			}
 		}
 	}
 
 	private func configureViews() {
+		tableView.dataSource = self
+		tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseId)
 		tableView.translatesAutoresizingMaskIntoConstraints = false
 
 		view.addSubview(tableView)
@@ -75,5 +84,17 @@ class ViewController: UIViewController {
 			tableView.topAnchor.constraint(equalTo: view.topAnchor),
 			tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
 		])
+	}
+}
+
+extension ViewController: UITableViewDataSource {
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		breweryNames.count
+	}
+
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseId, for: indexPath)
+		cell.textLabel?.text = breweryNames[indexPath.row]
+		return cell
 	}
 }

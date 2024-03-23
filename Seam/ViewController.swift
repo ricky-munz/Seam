@@ -7,6 +7,10 @@
 
 import UIKit
 
+struct BreweryPayload: Decodable {
+	let name: String
+}
+
 class Api {
 	static let shared = Api()
 
@@ -34,14 +38,14 @@ class Api {
 		URLSession.shared.dataTask(with: request) { data, _, error in
 			guard
 				error == nil,
-				let data
+				let data,
+				let breweryPayloads = try? JSONDecoder().decode([BreweryPayload].self, from: data)
 			else {
 				completion([])
 				return
 			}
 
-			// TODO: decode JSON here.
-			completion([])
+			completion(breweryPayloads.map(\.name))
 		}.resume()
 	}
 }

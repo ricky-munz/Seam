@@ -51,12 +51,10 @@ class Api {
 }
 
 class ViewController: UIViewController {
-
 	let tableView = UITableView()
+	private let cellReuseId = "cell"
 
 	var breweryNames = [String]()
-
-	let cellReuseId = "cell"
 
 	override func viewDidLoad() {
 		super.viewDidLoad()

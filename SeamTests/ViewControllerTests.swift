@@ -14,4 +14,19 @@ final class ViewControllerTests: XCTestCase {
 		let sut = ViewController()
 		XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
 	}
+
+	func test_viewDidLoad_tableIsPopulated() {
+		let sut = ViewController()
+
+		sut.loadViewIfNeeded()
+
+		let expectation = expectation(description: "Load rows")
+
+		DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+			XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 2)
+			expectation.fulfill()
+		}
+
+		waitForExpectations(timeout: 2)
+	}
 }

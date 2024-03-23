@@ -17,7 +17,6 @@
   },
   "testTargets" : [
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:Seam.xcodeproj",
         "identifier" : "9C6716A92BAC78A900953004",

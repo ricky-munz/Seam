@@ -12,7 +12,7 @@
 		9C67169C2BAC78A800953004 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C67169B2BAC78A800953004 /* ViewController.swift */; };
 		9C6716A12BAC78A900953004 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C6716A02BAC78A900953004 /* Assets.xcassets */; };
 		9C6716A42BAC78A900953004 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6716A22BAC78A900953004 /* LaunchScreen.storyboard */; };
-		9C6716AF2BAC78A900953004 /* SeamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6716AE2BAC78A900953004 /* SeamTests.swift */; };
+		9C6716C92BAE550600953004 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6716C82BAE550600953004 /* ViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +34,8 @@
 		9C6716A32BAC78A900953004 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C6716A52BAC78A900953004 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9C6716AA2BAC78A900953004 /* SeamTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SeamTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C6716AE2BAC78A900953004 /* SeamTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeamTests.swift; sourceTree = "<group>"; };
 		9C6716C72BAC7A4500953004 /* SeamTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SeamTests.xctestplan; sourceTree = "<group>"; };
+		9C6716C82BAE550600953004 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,7 +91,7 @@
 		9C6716AD2BAC78A900953004 /* SeamTests */ = {
 			isa = PBXGroup;
 			children = (
-				9C6716AE2BAC78A900953004 /* SeamTests.swift */,
+				9C6716C82BAE550600953004 /* ViewControllerTests.swift */,
 			);
 			path = SeamTests;
 			sourceTree = "<group>";
@@ -149,6 +149,7 @@
 					};
 					9C6716A92BAC78A900953004 = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 						TestTargetID = 9C6716932BAC78A800953004;
 					};
 				};
@@ -206,7 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C6716AF2BAC78A900953004 /* SeamTests.swift in Sources */,
+				9C6716C92BAE550600953004 /* ViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +411,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9LMP86F23V;
@@ -419,6 +421,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.rickymunz.SeamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Seam.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Seam";
@@ -430,6 +433,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9LMP86F23V;

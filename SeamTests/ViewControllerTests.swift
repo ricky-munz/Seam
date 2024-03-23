@@ -10,4 +10,8 @@ import XCTest
 
 final class ViewControllerTests: XCTestCase {
 
+	func test_onInit_tableIsEmpty() {
+		let sut = ViewController()
+		XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
+	}
 }

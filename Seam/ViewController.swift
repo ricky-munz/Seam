@@ -56,12 +56,14 @@ class ViewController: UIViewController {
 
 	var breweryNames = [String]()
 
+	var loadBreweries = Api.shared.loadBreweries
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
 
 		configureViews()
 
-		Api.shared.loadBreweries() { [weak self] breweryNames in
+		loadBreweries { [weak self] breweryNames in
 			DispatchQueue.main.async {
 				self?.breweryNames = breweryNames
 				self?.tableView.reloadData()

@@ -14,6 +14,7 @@
 		9C6716A42BAC78A900953004 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C6716A22BAC78A900953004 /* LaunchScreen.storyboard */; };
 		9C6716C92BAE550600953004 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6716C82BAE550600953004 /* ViewControllerTests.swift */; };
 		9CD4EF5F2BB483950037D0D9 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4EF5E2BB483950037D0D9 /* API.swift */; };
+		9CD4EF612BB483F60037D0D9 /* BreweryDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD4EF602BB483F60037D0D9 /* BreweryDatasource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		9C6716C72BAC7A4500953004 /* SeamTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = SeamTests.xctestplan; sourceTree = "<group>"; };
 		9C6716C82BAE550600953004 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		9CD4EF5E2BB483950037D0D9 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		9CD4EF602BB483F60037D0D9 /* BreweryDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreweryDatasource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				9C6716972BAC78A800953004 /* AppDelegate.swift */,
 				9C6716992BAC78A800953004 /* SceneDelegate.swift */,
 				9C67169B2BAC78A800953004 /* ViewController.swift */,
+				9CD4EF602BB483F60037D0D9 /* BreweryDatasource.swift */,
 				9CD4EF5E2BB483950037D0D9 /* API.swift */,
 				9C6716A02BAC78A900953004 /* Assets.xcassets */,
 				9C6716A22BAC78A900953004 /* LaunchScreen.storyboard */,
@@ -203,6 +206,7 @@
 				9C67169C2BAC78A800953004 /* ViewController.swift in Sources */,
 				9C6716982BAC78A800953004 /* AppDelegate.swift in Sources */,
 				9CD4EF5F2BB483950037D0D9 /* API.swift in Sources */,
+				9CD4EF612BB483F60037D0D9 /* BreweryDatasource.swift in Sources */,
 				9C67169A2BAC78A800953004 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

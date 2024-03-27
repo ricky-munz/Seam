@@ -7,16 +7,6 @@
 
 import UIKit
 
-protocol BreweryDatasource {
-	func loadBreweries(completion: @escaping ([String]) -> Void)
-}
-
-class ApiBreweryDatasource: BreweryDatasource {
-	func loadBreweries(completion: @escaping ([String]) -> Void) {
-		Api.shared.loadBreweries(completion: completion)
-	}
-}
-
 class ViewController: UIViewController {
 	let tableView = UITableView()
 	private let cellReuseId = "cell"

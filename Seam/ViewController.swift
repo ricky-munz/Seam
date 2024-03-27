@@ -50,13 +50,17 @@ class Api {
 	}
 }
 
+protocol BreweryDatasource {
+	func loadBreweries(completion: @escaping ([String]) -> Void)
+}
+
 class ViewController: UIViewController {
 	let tableView = UITableView()
 	private let cellReuseId = "cell"
 
-	var breweryNames = [String]()
-
 	var loadBreweries = Api.shared.loadBreweries
+
+	var breweryNames = [String]()
 
 	override func viewDidLoad() {
 		super.viewDidLoad()

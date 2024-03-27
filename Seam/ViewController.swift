@@ -64,7 +64,7 @@ class ViewController: UIViewController {
 		configureViews()
 
 		loadBreweries { [weak self] breweryNames in
-			DispatchQueue.main.async {
+			self?.runOnMainThread {
 				self?.breweryNames = breweryNames
 				self?.tableView.reloadData()
 			}
@@ -84,6 +84,14 @@ class ViewController: UIViewController {
 			tableView.topAnchor.constraint(equalTo: view.topAnchor),
 			tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
 		])
+	}
+
+	private func runOnMainThread(_ task: @escaping () -> Void) {
+		if Thread.isMainThread {
+			task()
+		} else {
+			DispatchQueue.main.async(execute: task)
+		}
 	}
 }
 

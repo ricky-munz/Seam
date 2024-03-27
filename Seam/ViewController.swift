@@ -64,9 +64,19 @@ class ViewController: UIViewController {
 	let tableView = UITableView()
 	private let cellReuseId = "cell"
 
+	let datasource: BreweryDatasource
 	var loadBreweries = Api.shared.loadBreweries
 
 	var breweryNames = [String]()
+
+	init(datasource: BreweryDatasource = ApiBreweryDatasource()) {
+		self.datasource = datasource
+		super.init(nibName: nil, bundle: nil)
+	}
+	
+	required init?(coder: NSCoder) {
+		fatalError("init(coder:) has not been implemented")
+	}
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()

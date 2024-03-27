@@ -16,14 +16,21 @@ final class ViewControllerTests: XCTestCase {
 	}
 
 	func test_viewDidLoad_tableIsPopulated() {
-		let sut = ViewController()
-
-		sut.loadBreweries = { completion in
-			completion(Array(repeating: "Test", count: 20))
-		}
+		let datasourceSpy = BreweryDatasourceSpy()
+		let sut = ViewController(datasource: datasourceSpy)
 
 		sut.loadViewIfNeeded()
 
+		datasourceSpy.completion?(Array(repeating: "Test", count: 20))
+
 		XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 20)
+	}
+}
+
+private class BreweryDatasourceSpy: BreweryDatasource {
+	var completion: (([String]) -> Void)?
+
+	func loadBreweries(completion: @escaping ([String]) -> Void) {
+		self.completion = completion
 	}
 }

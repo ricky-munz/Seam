@@ -65,8 +65,6 @@ class ViewController: UIViewController {
 	private let cellReuseId = "cell"
 
 	let datasource: BreweryDatasource
-	var loadBreweries = Api.shared.loadBreweries
-
 	var breweryNames = [String]()
 
 	init(datasource: BreweryDatasource = ApiBreweryDatasource()) {
@@ -83,7 +81,7 @@ class ViewController: UIViewController {
 
 		configureViews()
 
-		loadBreweries { [weak self] breweryNames in
+		datasource.loadBreweries { [weak self] breweryNames in
 			self?.runOnMainThread {
 				self?.breweryNames = breweryNames
 				self?.tableView.reloadData()

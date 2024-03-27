@@ -18,6 +18,10 @@ final class ViewControllerTests: XCTestCase {
 	func test_viewDidLoad_tableIsPopulated() {
 		let sut = ViewController()
 
+		sut.loadBreweries = { completion in
+			completion(Array(repeating: "Test", count: 20))
+		}
+
 		sut.loadViewIfNeeded()
 
 		let expectation = expectation(description: "Load rows")

@@ -8,6 +8,10 @@
 import XCTest
 @testable import Seam
 
+protocol BreweryDatasource {
+	func loadBreweries(completion: @escaping ([String]) -> Void)
+}
+
 final class ViewControllerTests: XCTestCase {
 
 	func test_onInit_tableIsEmpty() {

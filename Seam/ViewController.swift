@@ -27,7 +27,7 @@ class ViewController: UIViewController {
 
 		configureViews()
 
-		datasource.loadBreweries { [weak self] breweryNames in
+		datasource.loadBreweries { [weak self] in
 			self?.runOnMainThread {
 				self?.tableView.reloadData()
 			}

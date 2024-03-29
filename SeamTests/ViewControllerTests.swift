@@ -22,7 +22,7 @@ final class ViewControllerTests: XCTestCase {
 		sut.loadViewIfNeeded()
 
 		datasourceSpy.breweries = Array(repeating: "Test", count: 20)
-		datasourceSpy.completion?(Array(repeating: "Test", count: 20))
+		datasourceSpy.completion?()
 
 		XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 20)
 	}
@@ -30,9 +30,9 @@ final class ViewControllerTests: XCTestCase {
 
 private class BreweryDatasourceSpy: BreweryDatasource {
 	var breweries = [String]()
-	var completion: (([String]) -> Void)?
+	var completion: (() -> Void)?
 
-	func loadBreweries(completion: @escaping ([String]) -> Void) {
+	func loadBreweries(completion: @escaping () -> Void) {
 		self.completion = completion
 	}
 }

@@ -9,16 +9,16 @@ import Foundation
 
 protocol BreweryDatasource {
 	var breweries: [String] { get }
-	func loadBreweries(completion: @escaping ([String]) -> Void)
+	func loadBreweries(completion: @escaping () -> Void)
 }
 
 class ApiBreweryDatasource: BreweryDatasource {
 	private(set) var breweries = [String]()
 
-	func loadBreweries(completion: @escaping ([String]) -> Void) {
+	func loadBreweries(completion: @escaping () -> Void) {
 		Api.shared.loadBreweries { breweries in
 			self.breweries = breweries
-			completion(breweries)
+			completion()
 		}
 	}
 }

@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
 	let datasource: BreweryDatasource
 
-	init(datasource: BreweryDatasource = ApiBreweryDatasource()) {
+	init(datasource: BreweryDatasource) {
 		self.datasource = datasource
 		super.init(nibName: nil, bundle: nil)
 	}

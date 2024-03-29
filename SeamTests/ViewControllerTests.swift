@@ -11,7 +11,7 @@ import XCTest
 final class ViewControllerTests: XCTestCase {
 
 	func test_onInit_tableIsEmpty() {
-		let sut = ViewController()
+		let sut = ViewController(datasource: BreweryDatasourceSpy())
 		XCTAssertEqual(sut.tableView.numberOfRows(inSection: 0), 0)
 	}
 

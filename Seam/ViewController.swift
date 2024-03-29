@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 	private let cellReuseId = "cell"
 
 	let datasource: BreweryDatasource
-	var breweryNames = [String]()
 
 	init(datasource: BreweryDatasource = ApiBreweryDatasource()) {
 		self.datasource = datasource
@@ -30,7 +29,6 @@ class ViewController: UIViewController {
 
 		datasource.loadBreweries { [weak self] breweryNames in
 			self?.runOnMainThread {
-				self?.breweryNames = breweryNames
 				self?.tableView.reloadData()
 			}
 		}
@@ -62,12 +60,12 @@ class ViewController: UIViewController {
 
 extension ViewController: UITableViewDataSource {
 	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		breweryNames.count
+		datasource.breweries.count
 	}
 
 	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 		let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseId, for: indexPath)
-		cell.textLabel?.text = breweryNames[indexPath.row]
+		cell.textLabel?.text = datasource.breweries[indexPath.row]
 		return cell
 	}
 }

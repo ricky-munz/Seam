@@ -28,7 +28,7 @@ final class ViewControllerTests: XCTestCase {
 }
 
 private class BreweryDatasourceSpy: BreweryDatasource {
-	var breweries = [String]()
+	private(set) var breweries = [String]()
 	var completion: (() -> Void)?
 
 	func loadBreweries(completion: @escaping () -> Void) {
